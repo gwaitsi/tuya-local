@@ -1,0 +1,34 @@
+name: Doorbell
+products:
+  - id: 0eqw21s5ix01q6mn
+    manufacturer: m-e
+    model: ME-BELL-522
+entities:
+  - entity: event
+    name: Doorbell
+    class: doorbell
+    icon: "mdi:doorbell"
+    dps:
+      - id: 5
+        type: string
+        name: event
+        optional: true
+        persist: false
+        mapping:
+          - dps_val: null
+            value: null
+          - value: ring
+      - id: 5
+        type: utf16b64
+        name: message
+        optional: true
+        persist: false
+      - id: 10
+        type: integer
+        name: button
+        optional: true
+        persist: false
+      - id: 1
+        type: base64
+        name: button_config
+        optional: true
